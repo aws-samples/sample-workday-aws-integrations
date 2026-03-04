@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Workday Extend AWS Translate Sample
+
+Resources:
+  TranslateFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: WorkdayTranslateFunction
+      Runtime: python3.11
+      Handler: index.handler
+      CodeUri: src/
+      Role: '{{resolve:ssm:/workday-extend-tenant-config/LambdaExecutionRole}}'
+      VpcConfig:
+        SecurityGroupIds:
+          - '{{resolve:ssm:/workday-extend-tenant-config/LambdaSecurityGroup}}'
+        SubnetIds:
+          - '{{resolve:ssm:/workday-extend-tenant-config/VPCSubnet1}}'
+          - '{{resolve:ssm:/workday-extend-tenant-config/VPCSubnet2}}'
+      Policies:
+        - Statement:
+          - Effect: Allow
+            Action:
+              - translate:TranslateText
+              - comprehend:DetectDominantLanguage
+            Resource: '*'
+
+Outputs:
+  FunctionName:
+    Description: Lambda function name for Workday Extend
+    Value: !Ref TranslateFunction
+  FunctionArn:
+    Description: Lambda function ARN for Workday Extend
+    Value: !GetAtt TranslateFunction.Arn

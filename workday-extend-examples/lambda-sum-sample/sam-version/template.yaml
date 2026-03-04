@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Lambda function that sums two numbers.
+
+Globals:
+  Function:
+    Timeout: 3
+    Runtime: python3.11
+
+Resources:
+  SumLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./
+      Role: '{{resolve:ssm:/workday-extend-tenant-config/LambdaExecutionRole}}'
+      VpcConfig:
+        SecurityGroupIds:
+          - '{{resolve:ssm:/workday-extend-tenant-config/LambdaSecurityGroup}}'
+        SubnetIds:
+          - '{{resolve:ssm:/workday-extend-tenant-config/VPCSubnet1}}'
+          - '{{resolve:ssm:/workday-extend-tenant-config/VPCSubnet2}}'
+      Handler: lambda_function.lambda_handler
+#     Events:
+ #       ApiEvent:
+  #        Type: Api
+   #       Properties:
+    #        Path: /sum
+     #       Method: post

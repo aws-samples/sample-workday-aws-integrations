@@ -1,0 +1,31 @@
+version = 0.1
+
+[default]
+[default.global.parameters]
+stack_name = "app-WorkdaySumFunctionSample"
+region = "us-west-2"
+s3_bucket = "workday-wcp-hfrblk-us-west-2"
+
+[default.build.parameters]
+cached = true
+parallel = true
+
+[default.validate.parameters]
+lint = true
+
+[default.deploy.parameters]
+resolve_s3 = false
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+
+[default.package.parameters]
+resolve_s3 = false
+
+[default.sync.parameters]
+watch = true
+
+[default.local_start_api.parameters]
+warm_containers = "EAGER"
+
+[default.local_start_lambda.parameters]
+warm_containers = "EAGER"
