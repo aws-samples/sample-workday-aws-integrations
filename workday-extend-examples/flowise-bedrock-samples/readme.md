@@ -86,7 +86,11 @@ If you'd rather start from this sample agentflow than build one from scratch:
 2. Find the tool's UUID:
    - Open the tool — the URL will look like `/tools/<uuid>`
    - Or query `GET http://localhost:3000/api/v1/tools` and find the `id` field
-3. Open `devcon-sample-agentflow.json` in a text editor and replace the `agentTools` block:
+3. Open `devcon-sample-agentflow.json` in a text editor. Find the `agentTools` block and make **two** changes:
+   - Change `"agentSelectedTool": "calculator"` → `"agentSelectedTool": "customTool"`
+   - Inside `agentSelectedToolConfig`, set `"selectedTool": "<paste-your-tool-uuid-here>"`
+
+   The block should look like this when done:
    ```json
    "agentTools": [
        {
@@ -105,3 +109,4 @@ If you'd rather start from this sample agentflow than build one from scratch:
 - **No response / timeout:** Verify your AWS credentials have `bedrock:InvokeModel` permissions in the selected region.
 - **"The provided model identifier is invalid":** The selected model may not be available in your chosen region. Switch to `us-east-1` or `us-west-2` for broadest model availability.
 - **Blank model dropdown:** Ensure Flowise was built after pulling the latest code (`pnpm build`).
+- **Model says it only has the Calculator tool:** You changed the `selectedTool` UUID but left `agentSelectedTool` set to `"calculator"`. Both fields must change — see "Alternative: Modify the JSON Before Import" above.
