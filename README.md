@@ -31,6 +31,8 @@ Each example includes complete source code, deployment guides, and configuration
 |---------|-------------|--------------|------------------|
 | [Lambda Sum Sample](workday-extend-examples/lambda-sum-sample/) | Simple calculation service demonstrating basic Workday Extend to AWS Lambda integration | Lambda, SAM | Orchestrations, External Endpoints |
 | [Workday Translate Sample](workday-extend-examples/workday-translate-sample/) | Real-time translation service using AWS AI services | Lambda, Translate, Comprehend, SAM | Orchestrations, External Endpoints |
+| [Employee Onboarding AgentCore Sample](workday-extend-examples/employee-onboarding-agentcore-sample/) | AI-powered employee onboarding assistant using Amazon Bedrock AgentCore with MCP tools and OAuth2 authentication | Bedrock AgentCore, Lambda, Cognito, CodeBuild | AgentCore Runtime, MCP Gateway |
+
 
 ## Getting Started
 
