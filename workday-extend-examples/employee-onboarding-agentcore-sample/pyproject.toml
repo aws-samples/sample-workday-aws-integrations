@@ -1,0 +1,23 @@
+[project]
+name = "sample-amazon-bedrock-agentcore-employee-onboarding"
+version = "0.1.0"
+description = "Amazon Bedrock AgentCore Employee Onboarding Sample"
+requires-python = ">=3.10"
+license = "MIT-0"
+
+dependencies = [
+    "boto3==1.42.97",
+    "botocore==1.42.97",
+    "pyyaml==6.0.3",
+    "python-dotenv==1.2.2",
+    "requests==2.33.1",
+    "bedrock-agentcore==1.7.0",
+    "strands-agents==1.37.0",
+    "mcp==1.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.5",
+    "hypothesis==6.122.6",
+]
