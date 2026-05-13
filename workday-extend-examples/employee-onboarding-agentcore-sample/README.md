@@ -124,7 +124,7 @@ See [DEPLOYMENT.md § Cleanup](DEPLOYMENT.md#resource-cleanup) for details on wh
 ├── DEPLOYMENT.md               # Setup, configuration, IAM, cost
 ├── TROUBLESHOOTING.md          # Common issues + fixes
 ├── SECURITY.md                 # Security posture + residual risk
-└── LICENSE                     # MIT-0
+└── LICENSE (repo root)          # MIT-0
 ```
 
 ## Where to Start Reading
@@ -196,7 +196,7 @@ Once you've deployed and explored the agent, try adding a third MCP tool to deep
 | [DEPLOYMENT.md](DEPLOYMENT.md) | Prerequisites, IAM permissions, configuration, cost, monitoring |
 | [TROUBLESHOOTING.md](TROUBLESHOOTING.md) | Common errors and how to fix them |
 | [SECURITY.md](SECURITY.md) | Security posture, what this sample is NOT, residual risk |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
+| [CONTRIBUTING.md](../../CONTRIBUTING.md) | Contribution guidelines |
 
 ## External References
 
@@ -206,4 +206,4 @@ Once you've deployed and explored the agent, try adding a third MCP tool to deep
 
 ## License
 
-This project is licensed under the MIT-0 License — see [LICENSE](LICENSE).
+This project is licensed under the MIT-0 License — see [LICENSE](../../LICENSE).

@@ -54,6 +54,20 @@ A real-time translation service that leverages AWS Translate and Comprehend to p
 
 **[View Example →](workday-translate-sample/)**
 
+### 3. Employee Onboarding AgentCore Sample
+**Directory**: `employee-onboarding-agentcore-sample/`
+
+An AI-powered employee onboarding assistant that demonstrates how to deploy a Strands agent on Amazon Bedrock AgentCore with MCP tools, OAuth2 authentication, and streaming responses. This example shows how to:
+- Deploy an AgentCore Runtime with a containerized agent
+- Configure an MCP Gateway with Cognito OAuth2 authentication
+- Discover and call tools dynamically via the Model Context Protocol
+- Stream structured responses using Server-Sent Events (SSE)
+- Serve tool implementations via Lambda behind the gateway
+
+**Use Cases**: Employee onboarding automation, AI-assisted HR workflows, enterprise agent orchestration
+
+**[View Example →](employee-onboarding-agentcore-sample/)**
+
 ## Working with Orchestrations
 
 One of the most powerful aspects of these AWS integrations is how they work with Workday Orchestrations:
