@@ -1,0 +1,197 @@
+{
+    "nodes": [
+        {
+            "id": "startAgentflow_0",
+            "type": "agentFlow",
+            "position": {
+                "x": -134,
+                "y": 47
+            },
+            "data": {
+                "id": "startAgentflow_0",
+                "label": "Start",
+                "version": 1.1,
+                "name": "startAgentflow",
+                "type": "Start",
+                "color": "#7EE787",
+                "hideInput": true,
+                "baseClasses": ["Start"],
+                "category": "Agent Flows",
+                "description": "Starting point",
+                "inputParams": [
+                    {
+                        "label": "Input Type",
+                        "name": "startInputType",
+                        "type": "options",
+                        "options": [
+                            {
+                                "label": "Chat Input",
+                                "name": "chatInput"
+                            }
+                        ],
+                        "default": "chatInput",
+                        "id": "s0-input",
+                        "display": true
+                    },
+                    {
+                        "label": "Ephemeral Memory",
+                        "name": "startEphemeralMemory",
+                        "type": "boolean",
+                        "optional": true,
+                        "id": "s0-mem",
+                        "display": true
+                    }
+                ],
+                "inputAnchors": [],
+                "inputs": {
+                    "startInputType": "chatInput",
+                    "startEphemeralMemory": true
+                },
+                "outputAnchors": [
+                    {
+                        "id": "startAgentflow_0-output-startAgentflow",
+                        "label": "Start",
+                        "name": "startAgentflow"
+                    }
+                ],
+                "outputs": {}
+            }
+        },
+        {
+            "id": "agentAgentflow_0",
+            "type": "agentFlow",
+            "position": {
+                "x": 60,
+                "y": 37
+            },
+            "data": {
+                "id": "agentAgentflow_0",
+                "label": "Agent 0",
+                "version": 3.2,
+                "name": "agentAgentflow",
+                "type": "Agent",
+                "color": "#4DD0E1",
+                "baseClasses": ["Agent"],
+                "category": "Agent Flows",
+                "description": "Claude Sonnet 4.6 with image upload and Calculator tool",
+                "inputParams": [
+                    {
+                        "label": "Model",
+                        "name": "agentModel",
+                        "type": "asyncOptions",
+                        "loadMethod": "listModels",
+                        "loadConfig": true,
+                        "id": "a0-model",
+                        "display": true
+                    }
+                ],
+                "inputAnchors": [],
+                "inputs": {
+                    "agentModel": "awsChatBedrock",
+                    "agentMessages": "",
+                    "agentTools": [
+                        {
+                            "agentSelectedTool": "calculator",
+                            "agentSelectedToolConfig": {},
+                            "agentSelectedToolRequiresHumanInput": false
+                        }
+                    ],
+                    "agentKnowledgeDocumentStores": "",
+                    "agentKnowledgeVSEmbeddings": "",
+                    "agentEnableMemory": true,
+                    "agentMemoryType": "allMessages",
+                    "agentUserMessage": "",
+                    "agentReturnResponseAs": "userMessage",
+                    "agentStructuredOutput": "",
+                    "agentUpdateState": "",
+                    "agentModelConfig": {
+                        "cache": "",
+                        "region": "us-east-1",
+                        "model": "anthropic.claude-sonnet-4-6",
+                        "customModel": "",
+                        "endpointHost": "",
+                        "streaming": true,
+                        "temperature": 0.7,
+                        "max_tokens_to_sample": 1024,
+                        "allowImageUploads": true,
+                        "latencyOptimized": "",
+                        "agentModel": "awsChatBedrock"
+                    }
+                },
+                "outputAnchors": [
+                    {
+                        "id": "agentAgentflow_0-output-agentAgentflow",
+                        "label": "Agent",
+                        "name": "agentAgentflow"
+                    }
+                ],
+                "outputs": {}
+            }
+        },
+        {
+            "id": "directReplyAgentflow_0",
+            "type": "agentFlow",
+            "position": {
+                "x": 449,
+                "y": 49
+            },
+            "data": {
+                "id": "directReplyAgentflow_0",
+                "label": "Direct Reply 0",
+                "version": 1,
+                "name": "directReplyAgentflow",
+                "type": "DirectReply",
+                "color": "#4DDBBB",
+                "hideOutput": true,
+                "baseClasses": ["DirectReply"],
+                "category": "Agent Flows",
+                "description": "Direct reply",
+                "inputParams": [
+                    {
+                        "label": "Message",
+                        "name": "directReplyMessage",
+                        "type": "string",
+                        "rows": 4,
+                        "acceptVariable": true,
+                        "id": "dr0-msg",
+                        "display": true
+                    }
+                ],
+                "inputAnchors": [],
+                "inputs": {
+                    "directReplyMessage": "<p><span class=\"variable\" data-type=\"mention\" data-id=\"agentAgentflow_0\" data-label=\"agentAgentflow_0\">{{ agentAgentflow_0 }}</span> </p>"
+                },
+                "outputAnchors": [],
+                "outputs": {}
+            }
+        }
+    ],
+    "edges": [
+        {
+            "source": "startAgentflow_0",
+            "sourceHandle": "startAgentflow_0-output-startAgentflow",
+            "target": "agentAgentflow_0",
+            "targetHandle": "agentAgentflow_0",
+            "data": {
+                "sourceColor": "#7EE787",
+                "targetColor": "#4DD0E1",
+                "isHumanInput": false
+            },
+            "type": "agentFlow",
+            "id": "e1"
+        },
+        {
+            "source": "agentAgentflow_0",
+            "sourceHandle": "agentAgentflow_0-output-agentAgentflow",
+            "target": "directReplyAgentflow_0",
+            "targetHandle": "directReplyAgentflow_0",
+            "data": {
+                "sourceColor": "#4DD0E1",
+                "targetColor": "#4DDBBB",
+                "isHumanInput": false
+            },
+            "type": "agentFlow",
+            "id": "e2"
+        }
+    ]
+}
