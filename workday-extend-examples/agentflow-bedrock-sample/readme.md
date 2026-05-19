@@ -6,14 +6,14 @@
 
 ## Prerequisites
 
-- Flowise running locally (`pnpm dev`)
+- Workday Extend running locally (`pnpm dev`)
 - AWS credentials configured with Bedrock access (access key + secret key, or AWS profile)
 
 ## Setup
 
-1. Start Flowise on your machine:
+1. Start Workday Extend on your machine:
    ```bash
-   cd Flowise
+   cd {project_root}
    pnpm install
    pnpm build
    pnpm dev
@@ -67,7 +67,7 @@ To change the model or region, open the Agent node → expand **AWS Bedrock Para
 
 The imported agentflow comes pre-configured with the built-in Calculator tool. **To add a custom tool, you must build a new agentflow from scratch** rather than editing this imported one.
 
-Custom tools are referenced in the agentflow JSON by their database ID (a UUID generated when the tool is created). That ID is unique to your local Flowise instance — we can't include it in a shared JSON file. Imported agentflows also don't expose the tool selector UI.
+Custom tools are referenced in the agentflow JSON by their database ID (a UUID generated when the tool is created). That ID is unique to your local Workday Extend instance — we can't include it in a shared JSON file. Imported agentflows also don't expose the tool selector UI.
 
 **To use a custom tool:**
 
@@ -108,5 +108,5 @@ If you'd rather start from this sample agentflow than build one from scratch:
 
 - **No response / timeout:** Verify your AWS credentials have `bedrock:InvokeModel` permissions in the selected region.
 - **"The provided model identifier is invalid":** The selected model may not be available in your chosen region. Switch to `us-east-1` or `us-west-2` for broadest model availability.
-- **Blank model dropdown:** Ensure Flowise was built after pulling the latest code (`pnpm build`).
+- **Blank model dropdown:** Ensure Workday Extend was built after pulling the latest code (`pnpm build`).
 - **Model says it only has the Calculator tool:** You changed the `selectedTool` UUID but left `agentSelectedTool` set to `"calculator"`. Both fields must change — see "Alternative: Modify the JSON Before Import" above.

@@ -28,7 +28,20 @@ Integrating AWS services with Workday Extend provides several key advantages:
 
 ## Examples in This Directory
 
-### 1. Lambda Sum Sample
+### 1. Workday Extend Bedrock Agentflow Sample
+**Directory**: `agentflow-bedrock-sample/`
+
+A pre-configured AI agentflow that demonstrates how to integrate Workday Extend with Amazon Bedrock for conversational AI. This example provides a ready-to-import agentflow using Claude Sonnet 4.6 with multimodal capabilities. It shows how to:
+- Connect Workday Extend to Amazon Bedrock for LLM inference
+- Enable multimodal image uploads for visual understanding
+- Configure built-in tools (Calculator) for agent-assisted computation
+- Import and customize agentflow configurations
+
+**Use Cases**: AI-powered assistants, multimodal document analysis, tool-augmented chat interfaces
+
+**[View Example →](agentflow-bedrock-sample/)**
+
+### 2. Lambda Sum Sample
 **Directory**: `lambda-sum-sample/`
 
 A simple calculation service that demonstrates the fundamental pattern for integrating Workday Extend with AWS Lambda. This example shows how to:
@@ -41,7 +54,7 @@ A simple calculation service that demonstrates the fundamental pattern for integ
 
 **[View Example →](lambda-sum-sample/)**
 
-### 2. Workday Translate Sample
+### 3. Workday Translate Sample
 **Directory**: `workday-translate-sample/`
 
 A real-time translation service that leverages AWS Translate and Comprehend to provide multi-language support. This example demonstrates:
@@ -54,7 +67,7 @@ A real-time translation service that leverages AWS Translate and Comprehend to p
 
 **[View Example →](workday-translate-sample/)**
 
-### 3. Employee Onboarding AgentCore Sample
+### 4. Employee Onboarding AgentCore Sample
 **Directory**: `employee-onboarding-agentcore-sample/`
 
 An AI-powered employee onboarding assistant that demonstrates how to deploy a Strands agent on Amazon Bedrock AgentCore with MCP tools, OAuth2 authentication, and streaming responses. This example shows how to:
