@@ -24,6 +24,15 @@ This solution deploys an Amazon API Gateway that sits in front of Amazon Bedrock
 1. Review the [AI Gateway repository](https://github.com/aws-samples/sample-ai-gateway-for-amazon-bedrock) and its accompanying blog post for deployment instructions.
 2. Deploy the CloudFormation stack in your AWS account.
 
+## Samples in This Directory
+
+### Workday Extend Bedrock Agentflow Sample
+**Directory**: [`agentflow-bedrock-sample/`](agentflow-bedrock-sample/)
+
+A pre-configured AI agentflow that demonstrates how to integrate Workday Extend with Amazon Bedrock for conversational AI. Provides a ready-to-import agentflow using Claude Sonnet 4.6 with multimodal image uploads and a built-in Calculator tool.
+
+**Use Cases**: AI-powered assistants, multimodal document analysis, tool-augmented chat interfaces
+
 ## Related Resources
 
 - [Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/)
