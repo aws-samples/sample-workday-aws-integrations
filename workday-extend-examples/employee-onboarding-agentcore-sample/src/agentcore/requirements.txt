@@ -1,0 +1,21 @@
+# Agent runtime dependencies (used by agentcore configure --requirements-file).
+#
+# Versions are pinned to known-working releases as of May 2026. If you're
+# deploying this sample later, consider updating to the latest compatible
+# versions:
+#   pip install --upgrade boto3 botocore requests strands-agents bedrock-agentcore mcp
+#
+# Then re-pin with:
+#   pip freeze | grep -E "boto3|botocore|pyyaml|python-dotenv|requests|bedrock-agentcore|strands-agents|mcp" > src/agentcore/requirements.txt
+boto3==1.42.97
+botocore==1.42.97
+pyyaml==6.0.3
+python-dotenv==1.2.2
+requests==2.33.1
+
+# AgentCore + Strands Agents
+bedrock-agentcore==1.7.0
+strands-agents==1.37.0
+
+# MCP tool discovery
+mcp==1.27.0

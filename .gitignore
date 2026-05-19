@@ -39,3 +39,11 @@ wheels/
 # Environment variables
 .env
 .env.local
+
+# Employee Onboarding AgentCore sample
+workday-extend-examples/employee-onboarding-agentcore-sample/.env
+workday-extend-examples/employee-onboarding-agentcore-sample/.bedrock_agentcore.yaml
+workday-extend-examples/employee-onboarding-agentcore-sample/src/.venv/
+workday-extend-examples/employee-onboarding-agentcore-sample/__pycache__/
+workday-extend-examples/employee-onboarding-agentcore-sample/.pytest_cache/
+workday-extend-examples/employee-onboarding-agentcore-sample/.hypothesis/
