@@ -1,6 +1,6 @@
 # Real-Time Translation in Workday with AWS Translate and Comprehend
 
-*By Anthony McClure, Alicia Bane, Fritz Lam, and Gene Krevets*
+*By Anthony McClure, Alicia Bain, Fritz Lam, and Gene Krevets*
 
 ## Introduction
 
