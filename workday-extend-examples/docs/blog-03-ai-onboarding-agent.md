@@ -1,6 +1,6 @@
 # Building an AI Employee Onboarding Agent with Workday and Amazon Bedrock AgentCore
 
-*By Anthony McClure, Alicia Bane, Fritz Lam, and Gene Krevets*
+*By Anthony McClure, Alicia Bain, Fritz Lam, and Gene Krevets*
 
 ## Introduction
 
