@@ -1,6 +1,6 @@
 # Getting Started with Workday Extend and AWS Lambda: Your First Cloud-Native Integration
 
-*By Anthony McClure, Alicia Bane, Fritz Lam, and Gene Krevets*
+*By Anthony McClure, Alicia Bain, Fritz Lam, and Gene Krevets*
 
 ## Introduction
 
