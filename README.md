@@ -33,12 +33,12 @@ Each example includes complete source code, deployment guides, and configuration
 | [Workday Translate Sample](workday-extend-examples/workday-translate-sample/) | Real-time translation service using AWS AI services | Lambda, Translate, Comprehend, SAM | Orchestrations, External Endpoints |
 | [Employee Onboarding AgentCore Sample](workday-extend-examples/employee-onboarding-agentcore-sample/) | AI-powered employee onboarding assistant using Amazon Bedrock AgentCore with MCP tools and OAuth2 authentication | Bedrock AgentCore, Lambda, Cognito, CodeBuild | AgentCore Runtime, MCP Gateway |
 
-### Custom Integrations
+### Amazon Bedrock Integrations
 
 | Example | Description | AWS Services | Workday Features |
 |---------|-------------|--------------|------------------|
-| [Bedrock Agentflow Sample](custom-integrations/amazon-bedrock-models/agentflow-bedrock-sample/) | Pre-configured agentflow integrating Workday Extend with Amazon Bedrock (Claude Sonnet 4.6) for multimodal chat with built-in tools | Bedrock | Agentflows |
-| [AI Gateway for Amazon Bedrock](custom-integrations/amazon-bedrock-models/) | Reference for deploying an API Gateway-based AI gateway in front of Amazon Bedrock | API Gateway, Lambda, Bedrock | External Endpoints |
+| [Bedrock Agentflow Sample](workday-flowise-examples/amazon-bedrock-models/agentflow-bedrock-sample/) | Pre-configured agentflow integrating Workday Extend with Amazon Bedrock (Claude Sonnet 4.6) for multimodal chat with built-in tools | Bedrock | Agentflows |
+| [AI Gateway for Amazon Bedrock](workday-extend-examples/amazon-bedrock-models/) | Reference for deploying an API Gateway-based AI gateway in front of Amazon Bedrock | API Gateway, Lambda, Bedrock | External Endpoints |
 
 
 ## Getting Started
