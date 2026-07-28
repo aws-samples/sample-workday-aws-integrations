@@ -11,7 +11,7 @@ dependencies = [
     "pyyaml==6.0.3",
     "python-dotenv==1.2.2",
     "requests==2.33.1",
-    "bedrock-agentcore==1.7.0",
+    "bedrock-agentcore==1.18.1",
     "strands-agents==1.37.0",
     "mcp==1.27.0",
 ]
